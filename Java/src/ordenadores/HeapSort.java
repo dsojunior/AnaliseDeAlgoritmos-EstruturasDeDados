@@ -45,7 +45,7 @@ public class HeapSort {
 		}
 	}
 	
-	static void imprimeArray(int [] entrada) {
+	public static void imprimeArray(int [] entrada) {
 		for (int i = 0; i < entrada.length; i++) {
 			System.out.print(entrada[i] + " ");
 		}
