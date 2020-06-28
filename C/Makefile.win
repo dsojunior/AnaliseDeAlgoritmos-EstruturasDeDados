@@ -1,0 +1,85 @@
+# Project: EstruturasDeDados
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = listaSequencial.o arvoreAVL.o exemploDoisRetornos.o filaDinamica.o filaEstatica.o listaLigada.o listaLigadaCabCirc.o listaLigadaD.o listaSequencialAlocacaoDeMemoria.o listaSequencialOrdenada.o pilhaDinamica.o pilhaEstatica.o usaArvoreAVL.o usaFilaDinamica.o usaFilaEstatica.o usaListaLigadaInterativo.o usaListaLigadaInterativoCC.o usaListaLigadaInterativoD.o usaPilhaDinamica.o usaPilhaEstatica.o
+LINKOBJ  = listaSequencial.o arvoreAVL.o exemploDoisRetornos.o filaDinamica.o filaEstatica.o listaLigada.o listaLigadaCabCirc.o listaLigadaD.o listaSequencialAlocacaoDeMemoria.o listaSequencialOrdenada.o pilhaDinamica.o pilhaEstatica.o usaArvoreAVL.o usaFilaDinamica.o usaFilaEstatica.o usaListaLigadaInterativo.o usaListaLigadaInterativoCC.o usaListaLigadaInterativoD.o usaPilhaDinamica.o usaPilhaEstatica.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = EstruturasDeDados.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+listaSequencial.o: listaSequencial.c
+	$(CC) -c listaSequencial.c -o listaSequencial.o $(CFLAGS)
+
+arvoreAVL.o: arvoreAVL.c
+	$(CC) -c arvoreAVL.c -o arvoreAVL.o $(CFLAGS)
+
+exemploDoisRetornos.o: exemploDoisRetornos.c
+	$(CC) -c exemploDoisRetornos.c -o exemploDoisRetornos.o $(CFLAGS)
+
+filaDinamica.o: filaDinamica.c
+	$(CC) -c filaDinamica.c -o filaDinamica.o $(CFLAGS)
+
+filaEstatica.o: filaEstatica.c
+	$(CC) -c filaEstatica.c -o filaEstatica.o $(CFLAGS)
+
+listaLigada.o: listaLigada.c
+	$(CC) -c listaLigada.c -o listaLigada.o $(CFLAGS)
+
+listaLigadaCabCirc.o: listaLigadaCabCirc.c
+	$(CC) -c listaLigadaCabCirc.c -o listaLigadaCabCirc.o $(CFLAGS)
+
+listaLigadaD.o: listaLigadaD.c
+	$(CC) -c listaLigadaD.c -o listaLigadaD.o $(CFLAGS)
+
+listaSequencialAlocacaoDeMemoria.o: listaSequencialAlocacaoDeMemoria.c
+	$(CC) -c listaSequencialAlocacaoDeMemoria.c -o listaSequencialAlocacaoDeMemoria.o $(CFLAGS)
+
+listaSequencialOrdenada.o: listaSequencialOrdenada.c
+	$(CC) -c listaSequencialOrdenada.c -o listaSequencialOrdenada.o $(CFLAGS)
+
+pilhaDinamica.o: pilhaDinamica.c
+	$(CC) -c pilhaDinamica.c -o pilhaDinamica.o $(CFLAGS)
+
+pilhaEstatica.o: pilhaEstatica.c
+	$(CC) -c pilhaEstatica.c -o pilhaEstatica.o $(CFLAGS)
+
+usaArvoreAVL.o: usaArvoreAVL.c
+	$(CC) -c usaArvoreAVL.c -o usaArvoreAVL.o $(CFLAGS)
+
+usaFilaDinamica.o: usaFilaDinamica.c
+	$(CC) -c usaFilaDinamica.c -o usaFilaDinamica.o $(CFLAGS)
+
+usaFilaEstatica.o: usaFilaEstatica.c
+	$(CC) -c usaFilaEstatica.c -o usaFilaEstatica.o $(CFLAGS)
+
+usaListaLigadaInterativo.o: usaListaLigadaInterativo.c
+	$(CC) -c usaListaLigadaInterativo.c -o usaListaLigadaInterativo.o $(CFLAGS)
+
+usaListaLigadaInterativoCC.o: usaListaLigadaInterativoCC.c
+	$(CC) -c usaListaLigadaInterativoCC.c -o usaListaLigadaInterativoCC.o $(CFLAGS)
+
+usaListaLigadaInterativoD.o: usaListaLigadaInterativoD.c
+	$(CC) -c usaListaLigadaInterativoD.c -o usaListaLigadaInterativoD.o $(CFLAGS)
+
+usaPilhaDinamica.o: usaPilhaDinamica.c
+	$(CC) -c usaPilhaDinamica.c -o usaPilhaDinamica.o $(CFLAGS)
+
+usaPilhaEstatica.o: usaPilhaEstatica.c
+	$(CC) -c usaPilhaEstatica.c -o usaPilhaEstatica.o $(CFLAGS)
